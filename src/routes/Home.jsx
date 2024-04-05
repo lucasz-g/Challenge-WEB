@@ -15,9 +15,6 @@ function Home(){
         // Armazenar a senha predefinida no localStorage
         localStorage.setItem('password', predefinedPassword);
         
-        // Armazenar o número de tentativas de login
-        var loginAttempts = 0;
-        
         // Criar o HTML para exibir a tela de login na nova janela
         var html = `
         <!DOCTYPE html>
@@ -68,12 +65,9 @@ function Home(){
               // Verificar se a senha digitada corresponde à senha armazenada
               var storedPassword = localStorage.getItem('password');
               if (password === storedPassword) {
-                // Se o login for bem-sucedido, gerar uma nova senha aleatória após 3 tentativas de login inválidas
-                if (loginAttempts >= 2) {
-                  var newPassword = generateRandomPassword();
-                  localStorage.setItem('password', newPassword);
-                  alert('Senha randomizada após 3 tentativas de login inválidas!');
-                }
+                // Se o login for bem-sucedido, gerar uma nova senha aleatória e armazená-la
+                var newPassword = generateRandomPassword();
+                localStorage.setItem('password', newPassword);
       
                 // Esconder o botão de login
                 var loginButton = document.querySelector('button');
@@ -83,9 +77,7 @@ function Home(){
                 var imageHtml = '<img src="https://via.placeholder.com/400x200" alt="Imagem">';
                 window.document.write(imageHtml);
               } else {
-                // Incrementar o número de tentativas de login
-                loginAttempts++;
-                alert('Usuário/senha inválidos. Tentativa ' + loginAttempts + ' de 3.');
+                alert('Usuário/senha inválidos');
               }
             }
       
