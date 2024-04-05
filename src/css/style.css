@@ -38,6 +38,8 @@ section#nav {
 
 img#nav-logo {
     width: 12.5rem;
+    max-width: 100%;
+    height: auto;
 }
 
 nav#nav-bar{
