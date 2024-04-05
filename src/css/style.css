@@ -359,7 +359,7 @@ body {
 
   .produto-button {
     padding: 10px 20px;
-    background-color: #5dbfca;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
@@ -369,7 +369,7 @@ body {
   }
 
   .produto-button:hover {
-    background-color: #397981;
+    background-color: #45a049;
   }
 /*
 Footer
