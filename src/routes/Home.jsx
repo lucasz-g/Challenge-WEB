@@ -74,7 +74,7 @@ function Home(){
                 loginButton.style.display = 'none';
       
                 // Mostrar a imagem na nova janela
-                var imageHtml = '<img src="https://via.placeholder.com/400x200" alt="Imagem">';
+                var imageHtml = '<img src="/src/assets/HQ-CORONAVIRUS-01.jpg" alt="Imagem" width="500px">';
                 window.document.write(imageHtml);
               } else {
                 alert('Usuário/senha inválidos');
@@ -221,8 +221,8 @@ function Home(){
             <div className="container">
                 <section className="produto">
                     <div className="info">
-                        <h3>História</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Gerador de Histórias</h3>
+                        <p>Clique no botão para gerar uma história</p>
                     </div>
                     <img src="src/assets/HQ-CORONAVIRUS-011-1.jpg" alt="Produto - Capa"/>
                     <div className="div-button">
