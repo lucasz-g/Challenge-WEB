@@ -2,12 +2,32 @@ import {} from 'react';
 import '/src/css/style.css';
 
 function Footer() {
+
+    const toggleContatoDevs = () => {
+        var x = document.getElementById("contato-devs-absolute");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+    }
+      
+    const validarEmail =  () => { 
+      const emailInput = document.getElementById('mail');
+    
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+      if (emailInput.value === null || !regexEmail.test(emailInput.value)) {
+        alert("E-mail inválido")    
+      } 
+    }
+
     return(
     <>
         <footer id="footer">
             <div id="footer-info-contato">
                 <div id="contato-link-info-desenvolvedores">
-                    <button id="btn-contato-devs" onClick="toggleContatoDevs()">
+                    <button id="btn-contato-devs" onClick={toggleContatoDevs}>
                         <h3 id="contato-grande">Contato</h3>
                         <p id="contato-mini">dos desenvolvedores</p>
                     </button>
@@ -28,7 +48,7 @@ function Footer() {
                         <form id="verificar-email">
                             <label htmlFor="mail">E-mail:</label>
                             <input type="email" id="mail" />
-                            <button onClick="validarEmail()" id="botao-comic" type="submit">Confirmar</button>                    
+                            <button onClick={validarEmail} id="botao-comic" type="submit">Confirmar</button>                    
                         </form>
                     </div>
                 </div>
