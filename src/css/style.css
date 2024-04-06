@@ -2,24 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-h2{
-    font-family: "Oswald", sans-serif;
-    font-weight: bold;
-    font-size: 3.2rem;
-}
-
-h3{
-    font-family: "Oswald", sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-p{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.4rem;
-}
 
 *{
     margin: 0;
@@ -28,10 +10,30 @@ p{
 html {
     scroll-behavior: smooth;
   }
-  
+
+@media only screen and (max-width: 600px) {
+
+h2{
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
 section#nav {
     display: flex;
-    
     padding: 1rem;
     background-color: #6adeed;
 }
@@ -45,14 +47,14 @@ img#nav-logo {
 nav#nav-bar{
     display: flex;
     width: 100%;
-
+    flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
 }
 
 ul#nav-list{
     display: flex;
-
+    flex-direction: column;
     gap: 1rem;
     padding: 2rem;
 
@@ -99,11 +101,13 @@ Section Projeto
 
 section#projeto {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 
     gap: 6rem;
     background-color: #6adeed;
-    padding: 2rem 1rem 2rem 2rem;
+    padding: 2rem;
 }
 
 div#projeto-text {
@@ -128,6 +132,8 @@ Section Problema
 
 section#problema {    
     display: flex;
+    flex-direction: column;
+
     justify-content: space-around;
     align-items: center;
     background-color: #d1fbfa;
@@ -144,7 +150,8 @@ div#problema-text {
 }
 
 img.section-img {
-    width: 31.25rem;
+    width: 20rem;
+    max-width: 100%;
     border-radius: 1.25rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -156,6 +163,7 @@ Section Público Alvo
 
 section#publico-alvo {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     gap: 2rem;
     color: #385a42;
@@ -176,34 +184,30 @@ Section Pontos fortes
 
 #pontos-fortes{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-image: url("src/assets/background-nuvens.avif");
-    width: 100%;
-    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
 }
 
 #imagem-nuvem{
-    width: 44rem;
-    height: 35rem;
+    width: 25rem;
+    height: 20rem;
 }
 
 #container-texto-imagem-nuvem{
     display: flex;
     flex-direction: column;
     align-items:center;
-    justify-content: flex-start;
-    
-    width: 80%;
-    height: 80%;
+    justify-self: center;
+
     gap: 1rem;
-    padding: 2rem 0rem 0rem 0rem;
+    padding: 1rem 0rem 0rem 0rem;
     
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 1.4rem;
-    margin: 3rem;
+    margin: 2rem;
 
     background-color: #bdedf285;
     
@@ -211,12 +215,13 @@ Section Pontos fortes
 
 #texto-imagem-nuvem{
     text-align: center;
-    font-size: 1rem;
-    font-weight: 50;
     height:16rem;
-    width: 30rem;
+    width: fit-content;
 }
 
+#p-nuvem {
+    font-size: 0.8rem;
+}
 
 /*
 Pitch
@@ -236,6 +241,7 @@ Pitch
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
 #footer{
     background-color: black;
     height: 50vh;
@@ -246,6 +252,8 @@ Pitch
 }
 
 #iframe-pitch{
+    width:20rem; 
+    height:15rem;
     border: 6px solid black;
 }
 #padding-titulo{
@@ -256,16 +264,14 @@ Desenvolvedores
 */
 
 #desenvolvedores{
-    height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 6rem;
+    justify-content: space-around;
+    gap: 1rem;
     background-image: url("src/assets/quadrinho-fundo\ \(2\).jpg");
     width: 100%;
-    height: 100vh;
+    height: 50rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -273,22 +279,24 @@ Desenvolvedores
 }
 #desenvolvedores-box{
     display: flex;
-    flex-direction: row;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 2rem;
 }
+
 .info-desenvolvedor{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .img-desenvolvedor{
     background-color: blueviolet;
     border-radius: 100rem;
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -383,20 +391,24 @@ Footer
     flex-direction: column;
     justify-content: space-around;
     position: relative;
+    height: auto;
 }
 
 #footer-info-contato{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    padding-top: 1rem;
-    width: 100%;
+    padding: 1rem;  
+    width: auto;
 }
 
 #direita{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 6rem;
+
+    width: auto;
+    height: auto;
 }
 
 #verificar-email{
@@ -414,6 +426,8 @@ Footer
     font-size: 2rem;
 }
 #btn-contato-devs{
+    display: flex;
+    flex-direction: column;
     border: none;
     background: none;
     border-radius: 0.5rem;
@@ -458,8 +472,9 @@ Footer
     height: 1.2rem;
 }
 #redes-sociais-container{
-    height: 5rem;
-    width: 20%;
+    padding: 1rem;
+    height: auto;
+    width: auto;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -535,3 +550,539 @@ Footer
 #lucas-garcia-img{
     background-image: url("src/assets/img-Lucas-Garcia.jpeg");
 }
+
+    
+}
+
+@media only screen and (min-width: 601px) { 
+
+    h2{
+        font-family: "Oswald", sans-serif;
+        font-weight: bold;
+        font-size: 3.2rem;
+    }
+    
+    h3{
+        font-family: "Oswald", sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    
+    p{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.4rem;
+    }
+
+    section#nav {
+        display: flex;
+        
+        padding: 1rem;
+        background-color: #6adeed;
+    }
+    
+    img#nav-logo {
+        width: 12.5rem;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    nav#nav-bar{
+        display: flex;
+        width: 100%;
+    
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    
+    ul#nav-list{
+        display: flex;
+    
+        gap: 1rem;
+        padding: 2rem;
+    
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    button.nav-button {
+        background-color:#12adbf; 
+        color: white; 
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 0.7rem ;
+        text-align: center;
+        vertical-align: middle;
+        border: none;
+        border-radius: 0.625rem;
+        width: 8rem;
+    }
+    
+    button.nav-button:hover{
+        background-color: #387a82; 
+        transition: 0.5s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 10px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .p-nav {
+        font-size: 1rem;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    a:visited { 
+        text-decoration: none;
+        color: inherit;
+    }
+    /* 
+    Section Projeto 
+    */
+    
+    section#projeto {
+        display: flex;
+        justify-content: space-around;
+    
+        gap: 6rem;
+        background-color: #6adeed;
+        padding: 2rem 1rem 2rem 2rem;
+    }
+    
+    div#projeto-text {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    
+    h2#projeto-text-titulo{
+        display: flex;
+        align-self: center;
+    }
+    
+    p.p-description {
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    /* 
+    Section Problema
+     */
+    
+    section#problema {    
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #d1fbfa;
+        padding: 5rem; 
+    }
+    
+    div#problema-text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+        color: #0c3837;
+        padding: 1rem;
+    }
+    
+    img.section-img {
+        width: 31.25rem;
+        border-radius: 1.25rem;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    
+    
+    /* 
+    Section Público Alvo
+     */
+    
+    section#publico-alvo {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+        color: #385a42;
+        padding: 5rem; 
+    }
+    
+    div#publico-alvo-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        padding: 2rem;
+    }
+    
+    /*
+    Section Pontos fortes
+    */
+    
+    #pontos-fortes{
+        display: flex;
+        flex-direction: row;
+        background-image: url("src/assets/background-nuvens.avif");
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+    }
+    
+    #imagem-nuvem{
+        width: 44rem;
+        height: 35rem;
+    }
+    
+    #container-texto-imagem-nuvem{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: flex-start;
+        
+        width: 80%;
+        height: 80%;
+        gap: 1rem;
+        padding: 2rem 0rem 0rem 0rem;
+        
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        border-radius: 1.4rem;
+        margin: 3rem;
+    
+        background-color: #bdedf285;
+        
+    }
+    
+    #texto-imagem-nuvem{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 50;
+        height:16rem;
+        width: 30rem;
+    }
+    
+    
+    /*
+    Pitch
+    */
+    
+    #pitch{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #e8fef1;
+        background-image: url("/src/assets/fundo-pitch.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    #footer{
+        background-color: black;
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    
+    #iframe-pitch{
+        width:43.75rem; 
+        height:24.688rem;
+        border: 6px solid black;
+    }
+    #padding-titulo{
+        padding-bottom: 2rem;
+    }
+    /*
+    Desenvolvedores
+    */
+    
+    #desenvolvedores{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+        background-image: url("src/assets/quadrinho-fundo\ \(2\).jpg");
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+    }
+    #desenvolvedores-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+    .info-desenvolvedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-desenvolvedor{
+        background-color: blueviolet;
+        border-radius: 100rem;
+        width: 10rem;
+        height: 10rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #caio-freitas{
+        background-image: url("src/assets/caio-img.jpeg");
+    }
+    #mateus-tibao{
+        background-image: url("src/assets/mateus-tibao.jpeg");
+    }
+    #lana-andrade{
+        background-image: url("src/assets/img-lana-andrade.jpeg");
+    }
+    #lucas-garcia{
+        background-image: url("src/assets/img-Lucas-Garcia.jpeg");
+    }
+    
+    /* 
+    Produto 
+    */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .h1-produto {
+        text-align: center;
+        padding: 3rem 0rem;
+        font-family: "Oswald", sans-serif;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+    
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    
+      .produto {
+        width: 50%;
+        border: 1px solid #ccc;
+        border-radius: 1rem;
+        padding: 4rem;
+        text-align: center;
+      }
+    
+      .produto img {
+        width: 100%;
+        height: auto;
+      }
+    
+      .info {
+        padding: 2rem;
+      }
+    
+      .info h2 {
+        font-size: 4.1rem;
+        margin-bottom: 1.2rem;
+      }
+    
+      .info p {
+        font-size: 1.2rem;
+        color: #555;
+      }
+    
+      .produto-button {
+        padding: 0.7rem 1.2rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 1rem;
+      }
+    
+      .produto-button:hover {
+        background-color: #45a049;
+      }
+    /*
+    Footer
+    */
+    
+    
+    #footer{
+        color: orange;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+    }
+    
+    #footer-info-contato{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 1rem;
+        width: 100%;
+    }
+    
+    #direita{
+        display: flex;
+        flex-direction: row;
+        gap: 6rem;
+    }
+    
+    #verificar-email{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #contato-grande, #contato-mini, #link-info-desenvolvedores{
+        color: orange;
+        text-decoration: none;
+        text-align: left;
+    }
+    
+    #contato-grande{
+        font-size: 2rem;
+    }
+    #btn-contato-devs{
+        border: none;
+        background: none;
+        border-radius: 0.5rem;
+        margin-left: 4rem;
+    }
+    
+    #btn-contato-devs:hover{
+        cursor:pointer;
+    }
+    
+    #linha{
+        border:solid;
+        border-color: orange;
+        width: 80rem;
+        align-self: center;
+        border-radius: 15rem;
+        border-width: 0.01rem;
+    }
+    
+    
+    #p-info-projeto{
+        padding-bottom: 1rem;
+    }
+    
+    #verificar-email{
+        font-family: 'Comic Neue', cursive;
+    }
+    
+    #botao-comic{
+        font-family: 'Comic Neue', cursive;
+        color: white;
+        background-color: orangered;
+        border: none;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #mail{
+        padding: none;
+        font-size: 1rem;
+        height: 1.2rem;
+    }
+    #redes-sociais-container{
+        height: 5rem;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    
+    .logo-rede-social-box{
+        border:solid;
+        border-color: orange;
+        width: 4rem;
+        height: 4rem;
+        justify-content: center;
+        border-radius: 15rem;
+        border-width: 0.01rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    
+    .fonte-branca{
+        color: orange;
+    }
+    
+    #contato-devs-absolute{
+        background-color: black;
+        width: 55rem;
+        height: 18rem;
+        top: 203rem;
+        position: absolute;
+        right: 0rem;
+        border-left: 1px solid orange;
+        border-width: 0.01rem;
+        display: flex;
+        justify-content: center;
+        display: none;
+    }
+    .imagem-desenvolvedor{
+        background-color: blueviolet;
+        border-radius: 100rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .contato-desenvolvedor-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    #contato-desenvolvedor-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1rem;
+        margin-left: 2rem;
+    }
+    
+    #caio-freitas-img{
+        background-image: url("src/assets/caio-img.jpeg");
+    }
+    
+    #lana-andrade-img{
+        background-image: url("src/assets/lana-img.jpeg");
+    }
+    
+    #mateus-tibao-img{
+        background-image: url("src/assets/mateus.jpeg");
+    }
+    #lucas-garcia-img{
+        background-image: url("src/assets/img-Lucas-Garcia.jpeg");
+    }
+    
+}
+  

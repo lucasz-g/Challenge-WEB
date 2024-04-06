@@ -115,7 +115,7 @@ function Home(){
             <div id="container-texto-imagem-nuvem">
                 <h2 id="pontos-fortes-titulo">Pontos Fortes</h2>
                 <div id="texto-imagem-nuvem">
-                    <p>
+                    <p id='p-nuvem'>
                         O diferencial da nossa ideia é maneira com que a criança se relaciona com a informação, uma vez apresentada com personagens desenhados e histórias simples, a criança consegue compreender o que irá acontecer e principalmente não se assustar, ou ter qualquer sentimento ruim.
                         Nosso projeto além de tudo, incentiva a leitura e possui pouco custo, uma vez o maior gasto será com comissões de artistas para as histórias.  O sistema pode ser incluído diretamente no site  já existente do HC e no seu sistemas de e-mail.
                         Será possível também manter acessibilidade colocando posteriormente uma ferramenta de leitura para deficientes visuais, por exemplo.
@@ -155,9 +155,8 @@ function Home(){
         </section>
 
         <section id="pitch">
-
             <h2 id="padding-titulo">Pitch</h2>
-            <iframe id="iframe-pitch" width="700" height="395" src="https://www.youtube.com/embed/b3wKX77eU0g" title="CHALLENGE 2023/2024 - ESPS 1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+            <iframe id="iframe-pitch" src="https://www.youtube.com/embed/b3wKX77eU0g" title="CHALLENGE 2023/2024 - ESPS 1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
         </section>
 
         <section id="desenvolvedores">
